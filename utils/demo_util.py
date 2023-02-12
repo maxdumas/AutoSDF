@@ -44,7 +44,7 @@ def get_shape_comp_opt(gpu_id=0):
     opt.seed = 111
     opt.isTrain = False
     opt.gpu_ids = gpuid
-    opt.device = 'cuda:%s' % gpuid[0]
+    opt.device = "cpu" #'cuda:%s' % gpuid[0]
     opt.batch_size = batch_size
     opt.max_dataset_size = max_dataset_size
 

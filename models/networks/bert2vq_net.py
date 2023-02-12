@@ -16,7 +16,7 @@ class BERT2VQ(nn.Module):
         if opt.gpu_ids[0] != -1:
             self.device = f'cuda:{opt.gpu_ids[0]}'
         else:
-            self.device + "cpu"
+            self.device = "cpu"
         ntoken=512
         nblocks = 2
         use_attn = False

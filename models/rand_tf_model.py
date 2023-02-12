@@ -3,7 +3,7 @@ from collections import OrderedDict
 
 import numpy as np
 import einops
-import marching_cubes as mcubes
+import mcubes
 from omegaconf import OmegaConf
 from termcolor import colored, cprint
 from einops import rearrange, repeat
@@ -196,7 +196,7 @@ class RandTransformerModel(BaseModel):
                      'inp', 'inp_pos', 'tgt', 'tgt_pos',
                      'x_idx', 'x_idx_seq', 'z_q', 'x']
 
-        self.tocuda(var_names=vars_list)
+        # self.tocuda(var_names=vars_list)
 
     def forward(self):
         """ given 
